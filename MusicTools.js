@@ -6,15 +6,15 @@ let MusicTools = {
     },
 
     frequencyToMidiPitch(frequency) {
-        return 12 * log2(frequency / 440) + 69;
+        return 12 * Math.log2(frequency / 440) + 69;
     },
 
     dbfsToLinearAmplitude(dbfs) {
-        return 10 ** dbfs/20;
+        return 10 ** (dbfs/20);
     },
 
     linearAmplitudeTodBFS(linear) {
-        return 20 * log10(linear);
+        return 20 * Math.log10(linear);
     }
 };
 
